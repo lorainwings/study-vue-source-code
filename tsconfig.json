@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "allowJs": true,
+    "importHelpers": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "declaration": true,
+    "declarationDir": "./dist/",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["types/*", "types/*/index.d.ts"]
+    }
+  },
+  "include": ["src/**/*", "types/**/*"], // 必须包含types, 以免无法找到类型声明文件
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

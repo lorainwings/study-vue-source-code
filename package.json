@@ -1,0 +1,57 @@
+{
+  "name": "@lorain/similar-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/similar-vue.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src --ext .ts",
+    "dev": "cross-env NODE_ENV='development' webpack-dev-server --config ./@build/webpack.dev.js",
+    "build": "cross-env NODE_ENV='development' webpack --config ./@build/webpack.prod.js"
+  },
+  "keywords": [
+    "vue",
+    "umd",
+    "framework"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.12.20",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.7.2",
+    "eslint-config-alloy": "^3.4.0",
+    "happypack": "^5.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.3",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint src --ext .ts",
+      "git add"
+    ]
+  }
+}
